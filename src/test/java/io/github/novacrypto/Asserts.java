@@ -19,17 +19,17 @@
  *  You can contact the authors via github issues.
  */
 
-package io.github.novacrypto.project;
+package io.github.novacrypto;
 
-import org.junit.Test;
+import java.util.Arrays;
 
-/**
- * Delete me and my package, this is just for helping create the folder structure
- */
-public final class DeleteMeTests {
+import static io.github.novacrypto.Hex.toHex;
+import static org.junit.Assert.assertEquals;
 
-    @Test
-    public void canCreate() {
-        new DeleteMe();
+final class Asserts {
+    static void assertByteArraysSame(byte[] expected, byte[] actual) {
+        if (!Arrays.equals(expected, actual)) {
+            assertEquals(toHex(expected), toHex(actual));
+        }
     }
 }

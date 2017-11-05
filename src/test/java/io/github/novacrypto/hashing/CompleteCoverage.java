@@ -19,10 +19,14 @@
  *  You can contact the authors via github issues.
  */
 
-package io.github.novacrypto.project;
+package io.github.novacrypto.hashing;
 
-/**
- * Delete me and my package, this is just for helping create the folder structure
- */
-public final class DeleteMe {
+import org.junit.Test;
+
+public final class CompleteCoverage {
+
+    @Test
+    public void packageProtectedConstructorForCoverage() {
+        new Hash160();
+    }
 }

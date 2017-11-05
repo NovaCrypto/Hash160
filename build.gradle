@@ -60,6 +60,9 @@ bintray {
 
 repositories {
     jcenter()
+    maven {
+        url 'https://dl.bintray.com/novacrypto/Hashing/'
+    }
 }
 
 compileJava {
@@ -68,12 +71,10 @@ compileJava {
 }
 
 dependencies {
-    //compile 'io.github.novacrypto:ToRuntime:0.9.0@jar'
+    compile 'io.github.novacrypto:SHA256:0.0.1@jar'
+    compile 'io.github.novacrypto:ToRuntime:0.9.0@jar'
+    compile 'com.madgag.spongycastle:core:1.58.0.0@jar'
     testCompile 'junit:junit:4.12'
-    //testCompile 'com.google.code.gson:gson:2.7'
-    //testCompile 'org.assertj:assertj-core:3.8.0'
-    //testCompile 'io.github.novacrypto:Base58:0.1.0@jar'
-    //testCompile 'io.github.novacrypto:BIP39:0.1.2@jar'
 }
 
 task(installSharedIdea, type: Copy) {
