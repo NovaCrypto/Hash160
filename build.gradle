@@ -38,7 +38,7 @@ apply from: 'bintray.gradle'
 apply plugin: 'com.github.ben-manes.versions'
 
 group 'io.github.novacrypto'
-version '0.0.1'
+version '2018.10.06'
 
 // To upload a new version
 // ./gradlew clean build bintrayUpload -Puser=user -Pkey=APIKEY
@@ -71,26 +71,10 @@ compileJava {
 }
 
 dependencies {
-    compile 'io.github.novacrypto:SHA256:0.0.1@jar'
-    compile 'io.github.novacrypto:ToRuntime:0.9.0@jar'
+    compile 'io.github.novacrypto:SHA256:2018.10.06@jar'
+    compile 'io.github.novacrypto:ToRuntime:2018.10.06@jar'
     compile 'com.madgag.spongycastle:core:1.58.0.0@jar'
     testCompile 'junit:junit:4.12'
-}
-
-dependencyUpdates {
-    outputFormatter = { result ->
-        if (!result.outdated.dependencies.isEmpty()) {
-            throw new GradleException('Abort, there are dependencies to update.')
-        }
-    }
-}
-
-bintrayUpload.dependsOn(dependencyUpdates)
-
-task(installSharedIdea, type: Copy) {
-    description = "Copy the shared intellij files into local .idea/"
-    from 'ideaShared/'
-    into '.idea/'
 }
 
 compileJava.options.encoding = 'UTF-8'
