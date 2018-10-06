@@ -24,7 +24,7 @@ Add dependency:
 
 ```
 dependencies {
-    compile 'io.github.novacrypto:Hash160:0.0.1@jar'
+    compile 'io.github.novacrypto:Hash160:2018.10.06@jar'
 }
 
 ```
