@@ -1,6 +1,6 @@
 /*
  *  Hash160
- *  Copyright (C) 2017-2018 Alan Evans, NovaCrypto
+ *  Copyright (C) 2017-2019 Alan Evans, NovaCrypto
  *
  *  This program is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -23,10 +23,13 @@ package io.github.novacrypto.hashing;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertNotNull;
+
 public final class CompleteCoverage {
 
     @Test
     public void packageProtectedConstructorForCoverage() {
-        new Hash160();
+        //noinspection ObviousNullCheck
+        assertNotNull(new Hash160());
     }
 }
