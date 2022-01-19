@@ -1,32 +1,21 @@
-[![Download](https://api.bintray.com/packages/novacrypto/Hashing/Hash160/images/download.svg)](https://bintray.com/novacrypto/Hashing/Hash160/_latestVersion) [![Build Status](https://travis-ci.org/NovaCrypto/Hash160.svg?branch=master)](https://travis-ci.org/NovaCrypto/Hash160) [![codecov](https://codecov.io/gh/NovaCrypto/Hash160/branch/master/graph/badge.svg)](https://codecov.io/gh/NovaCrypto/Hash160)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.novacrypto/Hash160)](https://search.maven.org/artifact/io.github.novacrypto/Hash160/)
 
 # Install
 
-Use either of these repositories:
+Using:
 
-```
+```groovy
 repositories {
-    jcenter()
-}
-```
-
-Or:
-
-```
-repositories {
-    maven {
-        url 'https://dl.bintray.com/novacrypto/Hashing/'
-    }
+    mavenCentral()
 }
 ```
 
 Add dependency:
 
-```
+```groovy
 dependencies {
-    compile 'io.github.novacrypto:Hash160:2019.01.27@jar'
+    implementation 'io.github.novacrypto:Hash160:2022.01.17'
 }
-
 ```
 
 # Usage
